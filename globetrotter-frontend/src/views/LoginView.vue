@@ -1,0 +1,63 @@
+<script setup>
+import { ref } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
+import LoginForm from '../components/LoginForm.vue'
+import { login } from '../api/auth'
+import { authStore } from '../stores/auth'
+import { toastStore } from '../stores/toast'
+
+const router = useRouter()
+const route = useRoute()
+const loading = ref(false)
+
+async function handleSubmit(credentials) {
+  loading.value = true
+  try {
+    const { access_token } = await login(credentials)
+    authStore.setSession({ token: access_token, username: credentials.username })
+    toastStore.success(`Welcome back, ${credentials.username}.`)
+    router.push(route.query.redirect || { name: 'destinations' })
+  } catch {
+    // interceptor already surfaced a toast
+  } finally {
+    loading.value = false
+  }
+}
+</script>
+
+<template>
+  <div class="grid min-h-[calc(100vh-4rem)] lg:grid-cols-2">
+    <!-- Brand panel -->
+    <div class="relative hidden flex-col justify-between overflow-hidden bg-deep-blue px-12 py-16 text-cream lg:flex">
+      <div class="absolute inset-0 flight-path opacity-20" />
+      <div class="relative">
+        <p class="font-mono text-xs uppercase tracking-[0.4em] text-sage">Welcome</p>
+        <h1 class="mt-4 max-w-sm font-display text-5xl font-light leading-tight">
+          Every great journey begins with a good decision.
+        </h1>
+      </div>
+      <p class="relative max-w-sm text-sm leading-relaxed text-cream/70">
+        Sign in to retrieve your saved trips, explore destinations matched to your preferences, and continue planning your next adventure.
+      </p>
+    </div>
+
+    <!-- Form panel -->
+    <div class="flex items-center justify-center px-6 py-16 bg-gradient-to-br from-cream via-lavender-light to-cream">
+      <div class="w-full max-w-sm">
+        <h2 class="font-display text-3xl font-light text-deep-blue">Welcome back.</h2>
+        <p class="mt-2 text-sm text-text-secondary">Sign in to continue planning.</p>
+
+        <div class="mt-8">
+          <LoginForm :loading="loading" @submit="handleSubmit" />
+        </div>
+
+        <p class="mt-6 text-center text-sm text-text-secondary">
+          Don't have an account?
+          <router-link to="/register" class="font-semibold text-sage hover:text-sage/80 transition"
+            >Create one</router-link
+          >
+        </p>
+      </div>
+    </div>
+  </div>
+</template>

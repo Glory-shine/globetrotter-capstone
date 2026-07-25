@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+/* ---- Design tokens: Sophisticated Blue, Sage, Lavender Palette ---- */
+@theme {
+  --color-deep-blue: #1a3a4a;       /* Deep blue for headings, primary surfaces */
+  --color-deep-blue-light: #2d5a6f;  /* Lighter blue for secondary elements */
+  --color-sage: #5a8f7b;             /* Sage green for accents and highlights */
+  --color-sage-light: #7aa896;       /* Light sage for soft backgrounds */
+  --color-lavender: #a89ac8;         /* Soft lavender for secondary accents */
+  --color-lavender-light: #e8e4f5;   /* Very light lavender for backgrounds */
+  --color-cream: #f5f3f0;            /* Soft cream background */
+  --color-cream-dark: #ede9e5;       /* Slightly darker cream */
+  --color-text-primary: #2c3e50;     /* Dark text for readability */
+  --color-text-secondary: #6b7280;   /* Medium gray text */
+  --color-text-light: #9ca3af;       /* Light gray text */
+  --color-border: #d9d4cf;           /* Soft border color */
+  --color-border-light: #e8e3de;     /* Very light border */
+
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-body: "Inter", "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+/* ---- Perforated edge: Subtle and elegant version ---- */
+.perforated {
+  position: relative;
+  border-top: 1px solid color-mix(in srgb, var(--color-sage) 20%, transparent);
+}
+.perforated::before,
+.perforated::after {
+  content: "";
+  position: absolute;
+  top: -7px;
+  width: 14px;
+  height: 14px;
+  border-radius: 9999px;
+  background: var(--color-cream);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--color-sage) 15%, transparent);
+}
+.perforated::before {
+  left: -7px;
+}
+.perforated::after {
+  right: -7px;
+}
+
+/* Badge: Premium stamp styling */
+.stamp {
+  transform: rotate(-3deg);
+  border: 1px solid var(--color-sage);
+  color: var(--color-sage);
+  background: color-mix(in srgb, var(--color-sage) 8%, transparent);
+}
+
+/* Dotted flight-path line for itinerary timelines */
+.flight-path {
+  background-image: linear-gradient(
+    to bottom,
+    color-mix(in srgb, var(--color-sage) 25%, transparent) 0,
+    color-mix(in srgb, var(--color-sage) 25%, transparent) 6px,
+    transparent 6px,
+    transparent 12px
+  );
+  background-size: 2px 12px;
+  background-repeat: repeat-y;
+  background-position: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
