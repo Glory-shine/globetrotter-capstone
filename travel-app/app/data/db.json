@@ -1,0 +1,272 @@
+{
+  "users": [
+    {
+      "id": "613b9900-f9f7-4028-b18c-599ef645e6b9",
+      "username": "glory",
+      "email": "glory@example.com",
+      "hashed_password": "4d234bf46a443c41883f48a20f52590e$4be7de4b22c4ba549f4434932e8e468f511df6b28b3174b9d21282cb2e4cd2ba",
+      "preferences": [
+        "nature",
+        "history",
+        "food"
+      ],
+      "created_at": "2026-07-17T23:07:06.499961+00:00"
+    }
+  ],
+  "destinations": [
+    {
+      "id": "dest-001",
+      "name": "Yaound\u00e9 Food Trail",
+      "country": "Cameroon",
+      "tags": [
+        "food",
+        "culture",
+        "nature",
+        "budget"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 32000.0,
+      "price_range_xaf": "15,000-40,000",
+      "description": "A spirited city loop through boukarous, street food stalls, art caf\u00e9s, and green neighbourhoods.",
+      "best_season": "Nov-Mar",
+      "category": "food",
+      "latitude": 3.848,
+      "longitude": 11.5021,
+      "rating": 4.7,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-002",
+      "name": "National Museum of Yaound\u00e9",
+      "country": "Cameroon",
+      "tags": [
+        "culture",
+        "history",
+        "food"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 45000.0,
+      "price_range_xaf": "20,000-55,000",
+      "description": "A rich stop for history lovers with exhibitions on Cameroonian heritage and royal traditions.",
+      "best_season": "Year-round",
+      "category": "culture",
+      "latitude": 3.868,
+      "longitude": 11.519,
+      "rating": 4.5,
+      "budget_tier": "mid"
+    },
+    {
+      "id": "dest-003",
+      "name": "Waza National Park",
+      "country": "Cameroon",
+      "tags": [
+        "adventure",
+        "nature",
+        "wildlife"
+      ],
+      "climate": "sahelian",
+      "avg_cost_per_day": 85000.0,
+      "price_range_xaf": "60,000-120,000",
+      "description": "Wildlife safaris, birdwatching, and dramatic landscapes in northern Cameroon.",
+      "best_season": "Nov-Apr",
+      "category": "nature",
+      "latitude": 11.3,
+      "longitude": 14.65,
+      "rating": 4.8,
+      "budget_tier": "premium"
+    },
+    {
+      "id": "dest-004",
+      "name": "Kribi Beachfront",
+      "country": "Cameroon",
+      "tags": [
+        "beach",
+        "nature",
+        "budget",
+        "romantic"
+      ],
+      "climate": "coastal",
+      "avg_cost_per_day": 38000.0,
+      "price_range_xaf": "18,000-50,000",
+      "description": "Relaxed beaches, grilled fish, and palm-fringed evenings by the Atlantic.",
+      "best_season": "Nov-Apr",
+      "category": "nature",
+      "latitude": 2.936,
+      "longitude": 9.906,
+      "rating": 4.4,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-005",
+      "name": "Lob\u00e9 Waterfalls",
+      "country": "Cameroon",
+      "tags": [
+        "adventure",
+        "nature",
+        "waterfall"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 42000.0,
+      "price_range_xaf": "20,000-55,000",
+      "description": "A scenic ecotourism escape with river views, hiking, and dramatic cascades.",
+      "best_season": "Jun-Oct",
+      "category": "nature",
+      "latitude": 4.02,
+      "longitude": 9.7,
+      "rating": 4.6,
+      "budget_tier": "mid"
+    },
+    {
+      "id": "dest-006",
+      "name": "Douala Night Market",
+      "country": "Cameroon",
+      "tags": [
+        "food",
+        "nightlife",
+        "culture"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 35000.0,
+      "price_range_xaf": "15,000-45,000",
+      "description": "A lively mix of late-night bites, local lounges, and urban energy.",
+      "best_season": "Year-round",
+      "category": "nightlife",
+      "latitude": 4.0413,
+      "longitude": 9.7043,
+      "rating": 4.3,
+      "budget_tier": "mid"
+    },
+    {
+      "id": "dest-007",
+      "name": "Limbe Botanical Gardens",
+      "country": "Cameroon",
+      "tags": [
+        "nature",
+        "culture",
+        "budget"
+      ],
+      "climate": "coastal",
+      "avg_cost_per_day": 30000.0,
+      "price_range_xaf": "12,000-35,000",
+      "description": "A lush botanical retreat with ocean views, heritage gardens, and relaxed trails.",
+      "best_season": "Jun-Sep",
+      "category": "nature",
+      "latitude": 4.018,
+      "longitude": 9.205,
+      "rating": 4.2,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-008",
+      "name": "Ekom Nkam Waterfalls",
+      "country": "Cameroon",
+      "tags": [
+        "adventure",
+        "nature",
+        "waterfall"
+      ],
+      "climate": "humid",
+      "avg_cost_per_day": 47000.0,
+      "price_range_xaf": "20,000-60,000",
+      "description": "A dramatic waterfall escape ideal for hiking, photography, and eco-travel.",
+      "best_season": "Nov-Feb",
+      "category": "nature",
+      "latitude": 5.12,
+      "longitude": 10.93,
+      "rating": 4.6,
+      "budget_tier": "mid"
+    },
+    {
+      "id": "dest-009",
+      "name": "Bafoussam Chiefdom Route",
+      "country": "Cameroon",
+      "tags": [
+        "culture",
+        "history",
+        "nature"
+      ],
+      "climate": "highland",
+      "avg_cost_per_day": 36000.0,
+      "price_range_xaf": "18,000-45,000",
+      "description": "Traditional chiefdoms, local crafts, and panoramic highland scenery.",
+      "best_season": "Nov-Mar",
+      "category": "culture",
+      "latitude": 5.47,
+      "longitude": 10.42,
+      "rating": 4.4,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-010",
+      "name": "Buea Mountain Loop",
+      "country": "Cameroon",
+      "tags": [
+        "adventure",
+        "nature",
+        "mountain"
+      ],
+      "climate": "temperate",
+      "avg_cost_per_day": 40000.0,
+      "price_range_xaf": "18,000-50,000",
+      "description": "Cool highland air, viewpoints, and guided hikes around Mount Cameroon.",
+      "best_season": "Nov-Feb",
+      "category": "nature",
+      "latitude": 4.153,
+      "longitude": 9.24,
+      "rating": 4.5,
+      "budget_tier": "mid"
+    },
+    {
+      "id": "dest-011",
+      "name": "Mfoundi Market Circuit",
+      "country": "Cameroon",
+      "tags": [
+        "food",
+        "culture",
+        "budget"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 28000.0,
+      "price_range_xaf": "12,000-35,000",
+      "description": "Afternoon bites, local fabrics, and authentic neighbourhood stops.",
+      "best_season": "Year-round",
+      "category": "food",
+      "latitude": 3.866,
+      "longitude": 11.51,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-012",
+      "name": "Bamenda Highlands",
+      "country": "Cameroon",
+      "tags": [
+        "nature",
+        "adventure",
+        "budget"
+      ],
+      "climate": "highland",
+      "avg_cost_per_day": 34000.0,
+      "price_range_xaf": "15,000-45,000",
+      "description": "Cool climate, scenic villages, and adventure routes that feel far from the city.",
+      "best_season": "Nov-Feb",
+      "category": "nature",
+      "latitude": 5.96,
+      "longitude": 10.15,
+      "rating": 4.4,
+      "budget_tier": "budget"
+    }
+  ],
+  "itineraries": [
+    {
+      "id": "24fd5a4a-1ce5-4e8e-9cba-92812af972c0",
+      "user_id": "613b9900-f9f7-4028-b18c-599ef645e6b9",
+      "title": "fun at waza",
+      "destination_id": "dest-003",
+      "start_date": "2026-07-20",
+      "end_date": "2026-07-22",
+      "items": [],
+      "created_at": "2026-07-20T20:01:34.514021+00:00"
+    }
+  ]
+}
