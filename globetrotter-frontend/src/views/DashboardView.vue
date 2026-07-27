@@ -1,6 +1,7 @@
 <script setup>
 import { computed, onMounted, reactive, ref } from 'vue'
 import { useRouter } from 'vue-router'
+import backgroundDestination from '../assets/images/backgrounds/background_destination.jpg'
 import DestinationCard from '../components/DestinationCard.vue'
 import InteractiveMap from '../components/InteractiveMap.vue'
 import SkeletonCard from '../components/SkeletonCard.vue'
@@ -14,6 +15,11 @@ const filters = reactive({ q: '', tag: '', max_cost: '' })
 const results = ref([])
 const loading = ref(true)
 const showMap = ref(false)
+const popularDestinations = computed(() => {
+  return [...results.value]
+    .sort((a, b) => Number(b.likes ?? 0) - Number(a.likes ?? 0))
+    .slice(0, 6)
+})
 const categoryPills = [
   { key: 'all', label: 'All Destinations', icon: '🗺️' },
   { key: 'food', label: 'Restaurants', icon: '🍽️' },
@@ -83,8 +89,12 @@ onMounted(runSearch)
 </script>
 
 <template>
-  <div class="min-h-screen bg-gradient-to-br from-cream via-lavender-light to-cream">
-    <div class="mx-auto max-w-7xl px-6 py-12 sm:px-8">
+  <div class="relative min-h-screen overflow-hidden bg-gradient-to-br from-cream via-lavender-light to-cream">
+    <div
+      class="pointer-events-none absolute inset-0 bg-cover bg-center opacity-20"
+      :style="{ backgroundImage: `url(${backgroundDestination})` }"
+    />
+    <div class="relative mx-auto max-w-7xl px-6 py-12 sm:px-8">
     <div class="max-w-2xl">
       <p class="font-mono text-xs uppercase tracking-[0.3em] text-sage">Discover</p>
       <h1 class="mt-3 font-display text-5xl font-semibold text-deep-blue sm:text-6xl">
@@ -173,6 +183,26 @@ onMounted(runSearch)
         >
           {{ showMap ? '≡ List' : '⊙ Map' }}
         </button>
+      </div>
+    </div>
+
+    <div v-if="!loading && popularDestinations.length" class="mt-10">
+      <div class="mb-4 flex items-center justify-between">
+        <h2 class="font-display text-2xl font-semibold text-deep-blue">Popular destinations</h2>
+        <span class="text-sm text-text-secondary">Most liked right now</span>
+      </div>
+      <div class="flex gap-4 overflow-x-auto pb-2">
+        <div
+          v-for="destination in popularDestinations"
+          :key="destination.id"
+          class="min-w-[220px] rounded-2xl border border-border-light bg-white/80 p-4 shadow-sm"
+        >
+          <div class="flex items-center justify-between">
+            <p class="font-semibold text-deep-blue">{{ destination.name }}</p>
+            <span class="text-sm text-sage">♥ {{ destination.likes ?? 0 }}</span>
+          </div>
+          <p class="mt-2 text-sm text-text-secondary">{{ destination.country }}</p>
+        </div>
       </div>
     </div>
 

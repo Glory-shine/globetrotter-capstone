@@ -2,6 +2,7 @@
 import { ref } from 'vue'
 import { authStore } from '../stores/auth'
 import { useRouter } from 'vue-router'
+import backgroundPageDetailAndProfile from '../assets/images/backgrounds/background_page_detail_and_profile.jpg'
 
 const router = useRouter()
 const username = ref(authStore.state.username || '')
@@ -34,8 +35,12 @@ function goBack() {
 </script>
 
 <template>
-  <div class="min-h-screen bg-gradient-to-br from-cream via-lavender-light to-cream">
-    <div class="mx-auto max-w-3xl px-6 py-12 sm:px-8">
+  <div class="relative min-h-screen overflow-hidden bg-gradient-to-br from-cream via-lavender-light to-cream">
+    <div
+      class="pointer-events-none absolute inset-0 bg-cover bg-center opacity-20"
+      :style="{ backgroundImage: `url(${backgroundPageDetailAndProfile})` }"
+    />
+    <div class="relative mx-auto max-w-3xl px-6 py-12 sm:px-8">
       <div class="bg-white rounded-2xl p-8 shadow">
         <div class="flex items-center justify-between">
           <h1 class="text-2xl font-display font-semibold text-deep-blue">Profile</h1>

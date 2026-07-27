@@ -1,11 +1,15 @@
 <script setup>
-import { ref } from 'vue'
-import { useRouter } from 'vue-router'
+import { ref, computed } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
+import logo1 from '../assets/logo/logo1.svg'
 import { authStore } from '../stores/auth'
 import { toastStore } from '../stores/toast'
 
 const router = useRouter()
+const route = useRoute()
 const menuOpen = ref(false)
+
+const isAuthRoute = computed(() => route.name === 'login' || route.name === 'register')
 
 const links = [
   { to: '/destinations', label: 'Destinations' },
@@ -22,21 +26,19 @@ function logout() {
 </script>
 
 <template>
-  <header class="sticky top-0 z-40 border-b border-border-light bg-cream/90 backdrop-blur">
+  <header
+    class="sticky top-0 z-40 border-b border-border-light backdrop-blur"
+    :class="isAuthRoute ? 'border-white/20 bg-white/20' : 'border-white/20 bg-white/20'"
+  >
     <div class="mx-auto max-w-7xl px-6 sm:px-8">
       <div class="flex h-16 items-center justify-between">
         <!-- Brand -->
         <router-link
           :to="authStore.isAuthenticated() ? '/destinations' : '/login'"
-          class="flex items-center gap-2 font-display text-xl font-semibold tracking-tight text-deep-blue"
+          class="flex items-center gap-3 font-display text-xl font-semibold tracking-tight text-deep-blue"
         >
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" class="text-sage">
-            <path
-              d="M21 3 3 10.5l6.2 1.9L13 20l3-6.3L21 3Z"
-              fill="currentColor"
-            />
-          </svg>
-          GlobeTrotter
+          <img :src="logo1" alt="GlobeTrotter logo" class="h-10 w-10 rounded-full object-cover shadow-sm" />
+          <span class="text-lg sm:text-xl">GlobeTrotter</span>
         </router-link>
 
         <!-- Desktop nav -->

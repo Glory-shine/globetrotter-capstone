@@ -1,11 +1,13 @@
 <script setup>
 import { ref, onMounted } from 'vue'
-import { useRoute } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
+import backgroundPageDetailAndProfile from '../assets/images/backgrounds/background_page_detail_and_profile.jpg'
 import { destinationsCache } from '../stores/destinationsCache'
 import { searchDestinations } from '../api/destinations'
 import InteractiveMap from '../components/InteractiveMap.vue'
 
 const route = useRoute()
+const router = useRouter()
 const id = route.params.id
 const destination = ref(null)
 const loading = ref(true)
@@ -33,11 +35,22 @@ onMounted(load)
 </script>
 
 <template>
-  <div class="min-h-screen bg-gradient-to-br from-cream via-lavender-light to-cream">
-    <div class="mx-auto max-w-4xl px-6 py-12 sm:px-8">
+  <div class="relative min-h-screen overflow-hidden bg-gradient-to-br from-cream via-lavender-light to-cream">
+    <div
+      class="pointer-events-none absolute inset-0 bg-cover bg-center opacity-20"
+      :style="{ backgroundImage: `url(${backgroundPageDetailAndProfile})` }"
+    />
+    <div class="relative mx-auto max-w-4xl px-6 py-12 sm:px-8">
       <div v-if="loading" class="p-8 bg-white rounded-2xl shadow">Loading…</div>
       <div v-else-if="error" class="p-8 bg-white rounded-2xl shadow">{{ error }}</div>
       <div v-else class="bg-white rounded-2xl p-8 shadow">
+        <button
+          type="button"
+          class="mb-6 inline-flex items-center rounded-full border border-border-light px-4 py-2 text-sm font-medium text-deep-blue transition hover:bg-sage/10"
+          @click="router.back()"
+        >
+          ← Back
+        </button>
         <h1 class="text-3xl font-display font-semibold text-deep-blue">{{ destination.name }}, {{ destination.country }}</h1>
         <p class="mt-2 text-sm text-text-secondary">{{ destination.description }}</p>
 
@@ -55,13 +68,19 @@ onMounted(load)
               <img v-for="(s, idx) in destination.media.secondary" :key="idx" :src="s" class="w-full h-20 object-cover rounded" />
             </div>
 
-            <div class="mt-6">
-              <h2 class="text-lg font-semibold">Prices & Activities</h2>
-              <div class="mt-2 text-sm text-text-secondary">
+            <div class="mt-6 rounded-2xl border border-border-light bg-cream/70 p-4">
+              <h2 class="text-lg font-semibold text-deep-blue">Prices & Activities</h2>
+              <div class="mt-3 space-y-3 text-sm text-text-secondary">
                 <div v-if="destination.activities && destination.activities.length">
-                  <ul class="list-disc pl-5">
-                    <li v-for="(a, idx) in destination.activities" :key="idx">{{ a.name }} <span v-if="a.price">— {{ a.price }}</span></li>
-                  </ul>
+                  <div
+                    v-for="(a, idx) in destination.activities"
+                    :key="idx"
+                    class="flex items-start justify-between gap-3 rounded-xl border border-border-light bg-white/80 px-3 py-2"
+                  >
+                    <span>{{ a.name }}</span>
+                    <span v-if="a.price" class="font-semibold text-sage">{{ a.price }}</span>
+                    <span v-else class="text-text-light">Price not listed</span>
+                  </div>
                 </div>
                 <div v-else>No activities data available.</div>
               </div>

@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
+import backgroundLoginRegister from '../assets/images/backgrounds/background_login_register.jpg'
 import LoginForm from '../components/LoginForm.vue'
 import { login } from '../api/auth'
 import { authStore } from '../stores/auth'
@@ -26,7 +27,11 @@ async function handleSubmit(credentials) {
 </script>
 
 <template>
-  <div class="grid min-h-[calc(100vh-4rem)] lg:grid-cols-2">
+  <div class="relative grid min-h-[calc(100vh-4rem)] overflow-hidden lg:grid-cols-2">
+    <div
+      class="pointer-events-none absolute inset-0 bg-cover bg-center opacity-100"
+      :style="{ backgroundImage: `url(${backgroundLoginRegister})` }"
+    />
     <!-- Brand panel -->
     <div class="relative hidden flex-col justify-between overflow-hidden bg-deep-blue px-12 py-16 text-cream lg:flex">
       <div class="absolute inset-0 flight-path opacity-20" />
@@ -43,7 +48,7 @@ async function handleSubmit(credentials) {
 
     <!-- Form panel -->
     <div class="flex items-center justify-center px-6 py-16 bg-gradient-to-br from-cream via-lavender-light to-cream">
-      <div class="w-full max-w-sm">
+      <div class="w-full max-w-sm rounded-[28px] border border-white/70 bg-white/70 p-8 shadow-[0_20px_60px_rgba(15,76,92,0.12)] backdrop-blur-sm">
         <h2 class="font-display text-3xl font-light text-deep-blue">Welcome back.</h2>
         <p class="mt-2 text-sm text-text-secondary">Sign in to continue planning.</p>
 

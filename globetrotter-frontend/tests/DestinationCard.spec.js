@@ -48,8 +48,10 @@ describe('DestinationCard', () => {
 
   it('emits "plan" with the destination when the CTA is clicked', async () => {
     const wrapper = mount(DestinationCard, { props: { destination: mockDestination } })
+    const planButton = wrapper.findAll('button').find((button) => button.text() === 'Plan a trip')
 
-    await wrapper.find('button').trigger('click')
+    expect(planButton).toBeTruthy()
+    await planButton.trigger('click')
 
     expect(wrapper.emitted('plan')).toHaveLength(1)
     expect(wrapper.emitted('plan')[0][0]).toEqual(mockDestination)
@@ -61,5 +63,14 @@ describe('DestinationCard', () => {
     // There should be at least two buttons: Plan and Details
     expect(buttons.length).toBeGreaterThanOrEqual(2)
     expect(wrapper.text()).toContain('Details')
+  })
+
+  it('toggles the like button and updates the likes count', async () => {
+    const wrapper = mount(DestinationCard, { props: { destination: mockDestination } })
+
+    expect(wrapper.text()).toContain('0')
+    await wrapper.find('button[aria-label="Like destination"]').trigger('click')
+
+    expect(wrapper.text()).toContain('1')
   })
 })

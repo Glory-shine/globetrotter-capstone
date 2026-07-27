@@ -1,5 +1,5 @@
 <script setup>
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
 
 const props = defineProps({
   destination: { type: Object, required: true },
@@ -10,6 +10,13 @@ import { useRouter } from 'vue-router'
 
 const emit = defineEmits(['plan'])
 const router = useRouter()
+const liked = ref(Boolean(props.destination?.liked))
+const likes = ref(Number(props.destination?.likes ?? 0))
+
+function toggleLike() {
+  liked.value = !liked.value
+  likes.value = liked.value ? likes.value + 1 : Math.max(0, likes.value - 1)
+}
 
 function goDetails() {
   router.push({ name: 'destinationDetails', params: { id: props.destination.id } })
@@ -21,17 +28,6 @@ const hasMatch = computed(() => {
   } catch (e) {
     return false
   }
-})
-
-const formattedCost = computed(() => {
-  if (props.destination.price_range_xaf) {
-    return `${props.destination.price_range_xaf} XAF`
-  }
-  const v = props.destination.avg_cost_per_day
-  if (typeof v === 'number') {
-    return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(v)
-  }
-  return ''
 })
 </script>
 
@@ -50,12 +46,24 @@ const formattedCost = computed(() => {
             {{ destination.country }}
           </p>
         </div>
-        <span
-          v-if="hasMatch"
-          class="stamp shrink-0 rounded-full px-3 py-1 text-[10px] font-semibold uppercase tracking-wider"
-        >
-          Match
-        </span>
+        <div class="flex items-center gap-2">
+          <button
+            type="button"
+            class="rounded-full border border-border-light px-2.5 py-1.5 text-sm transition"
+            :class="liked ? 'bg-sage/10 text-sage' : 'bg-white text-text-secondary hover:bg-sage/10'"
+            @click="toggleLike"
+            aria-label="Like destination"
+          >
+            ♥
+          </button>
+          <span class="text-sm font-medium text-text-secondary">{{ likes }}</span>
+          <span
+            v-if="hasMatch"
+            class="stamp shrink-0 rounded-full px-3 py-1 text-[10px] font-semibold uppercase tracking-wider"
+          >
+            Match
+          </span>
+        </div>
       </div>
 
       <p class="mt-3 text-sm leading-relaxed text-text-secondary">
@@ -78,16 +86,9 @@ const formattedCost = computed(() => {
       </div>
     </div>
 
-    <!-- Perforated stub: cost / climate / season -->
-    <div class="perforated mx-6 flex items-center justify-between py-4 text-xs">
-      <div class="font-mono">
-        <span class="text-base font-semibold text-deep-blue">{{ formattedCost }}</span>
-        <span class="text-text-secondary">/day</span>
-      </div>
-      <div class="text-right text-text-secondary">
-        <div class="capitalize">{{ destination.climate }}</div>
-        <div>{{ destination.best_season }}</div>
-      </div>
+    <div class="perforated mx-6 py-4 text-xs text-text-secondary">
+      <div class="capitalize">{{ destination.climate }}</div>
+      <div>{{ destination.best_season }}</div>
     </div>
 
     <div class="px-6 pb-6">

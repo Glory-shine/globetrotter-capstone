@@ -1,6 +1,7 @@
 <script setup>
 import { computed, onMounted, ref } from 'vue'
 import { useRouter } from 'vue-router'
+import backgroundForYou from '../assets/images/backgrounds/background_for_you.jpg'
 import DestinationCard from '../components/DestinationCard.vue'
 import InteractiveMap from '../components/InteractiveMap.vue'
 import SkeletonCard from '../components/SkeletonCard.vue'
@@ -67,8 +68,12 @@ onMounted(load)
 </script>
 
 <template>
-  <div class="min-h-screen bg-gradient-to-br from-cream via-lavender-light to-cream">
-    <div class="mx-auto max-w-7xl px-6 py-12 sm:px-8">
+  <div class="relative min-h-screen overflow-hidden bg-gradient-to-br from-cream via-lavender-light to-cream">
+    <div
+      class="pointer-events-none absolute inset-0 bg-cover bg-center opacity-20"
+      :style="{ backgroundImage: `url(${backgroundForYou})` }"
+    />
+    <div class="relative mx-auto max-w-7xl px-6 py-12 sm:px-8">
       <div class="max-w-2xl">
         <p class="font-mono text-xs uppercase tracking-[0.4em] text-sage">For You</p>
         <h1 class="mt-3 font-display text-6xl font-light text-deep-blue sm:text-7xl">

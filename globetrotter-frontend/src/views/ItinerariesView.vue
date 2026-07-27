@@ -1,6 +1,7 @@
 <script setup>
 import { onMounted, ref } from 'vue'
 import { useRoute } from 'vue-router'
+import backgroundItineraire from '../assets/images/backgrounds/background_itineraire.jpg'
 import ItineraryForm from '../components/ItineraryForm.vue'
 import ItineraryCard from '../components/ItineraryCard.vue'
 import InteractiveMap from '../components/InteractiveMap.vue'
@@ -40,8 +41,12 @@ onMounted(loadAll)
 </script>
 
 <template>
-  <div class="min-h-screen bg-gradient-to-br from-cream via-lavender-light to-cream">
-    <div class="mx-auto max-w-7xl px-6 py-12 sm:px-8">
+  <div class="relative min-h-screen overflow-hidden bg-gradient-to-br from-cream via-lavender-light to-cream">
+    <div
+      class="pointer-events-none absolute inset-0 bg-cover bg-center opacity-20"
+      :style="{ backgroundImage: `url(${backgroundItineraire})` }"
+    />
+    <div class="relative mx-auto max-w-7xl px-6 py-12 sm:px-8">
       <div class="max-w-2xl">
         <p class="font-mono text-xs uppercase tracking-[0.4em] text-sage">Trip Planner</p>
         <h1 class="mt-3 font-display text-6xl font-light text-deep-blue sm:text-7xl">Your itineraries</h1>
