@@ -22,6 +22,12 @@ const routes = [
     meta: { requiresAuth: true },
   },
   {
+    path: '/destinations/regions/:regionSlug',
+    name: 'regionDestinations',
+    component: () => import('./views/RegionDestinationsView.vue'),
+    meta: { requiresAuth: true },
+  },
+  {
     path: '/destinations/:id',
     name: 'destinationDetails',
     component: () => import('./views/DestinationDetailsView.vue'),

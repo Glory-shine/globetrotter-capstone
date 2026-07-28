@@ -33,6 +33,14 @@ function onCreated(newItinerary) {
   itineraries.value = [newItinerary, ...itineraries.value]
 }
 
+function onUpdated(updatedItinerary) {
+  itineraries.value = itineraries.value.map((itinerary) => (itinerary.id === updatedItinerary.id ? updatedItinerary : itinerary))
+}
+
+function onDeleted(itineraryId) {
+  itineraries.value = itineraries.value.filter((itinerary) => itinerary.id !== itineraryId)
+}
+
 function toggleView() {
   showMap.value = !showMap.value
 }
@@ -71,11 +79,13 @@ onMounted(loadAll)
 
       <div class="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-5" v-else>
         <div class="lg:col-span-2">
-          <ItineraryForm
-            :destinations="destinations"
-            :initial-destination-id="route.query.destination_id || ''"
-            @created="onCreated"
-          />
+          <div class="rounded-2xl bg-white/90 p-1 shadow-lg shadow-ink/10 backdrop-blur-sm">
+            <ItineraryForm
+              :destinations="destinations"
+              :initial-destination-id="route.query.destination_id || ''"
+              @created="onCreated"
+            />
+          </div>
         </div>
 
         <div class="space-y-6 lg:col-span-3">
@@ -88,6 +98,9 @@ onMounted(loadAll)
               :key="it.id"
               :itinerary="it"
               :destination="destinationsCache.get(it.destination_id)"
+              :destinations="destinations"
+              @updated="onUpdated"
+              @deleted="onDeleted"
             />
           </template>
           <div v-else class="rounded-3xl border border-dashed border-border py-24 text-center">

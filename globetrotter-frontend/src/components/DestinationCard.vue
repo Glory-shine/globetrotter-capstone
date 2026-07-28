@@ -1,6 +1,21 @@
 <script setup>
 import { computed, ref } from 'vue'
 
+const imageByName = {
+  'Yaoundé Food Trail': '/images/destinations/real/yaounde-food-trail.jpg',
+  'National Museum of Yaoundé': '/images/destinations/real/national-museum-yaounde.jpg',
+  'Waza National Park': '/images/destinations/real/waza-national-park.jpg',
+  'Kribi Beachfront': '/images/destinations/real/kribi-beachfront.jpg',
+  'Lobé Waterfalls': '/images/destinations/real/lobe-waterfalls.jpg',
+  'Douala Night Market': '/images/destinations/real/douala-night-market.jpg',
+  'Limbe Botanical Gardens': '/images/destinations/real/limbe-botanical-gardens.jpg',
+  'Ekom Nkam Waterfalls': '/images/destinations/real/ekom-nkam-waterfalls.jpg',
+  'Bafoussam Chiefdom Route': '/images/destinations/real/bafoussam-chiefdom-route.jpg',
+  'Buea Mountain Loop': '/images/destinations/real/buea-mountain-loop.jpg',
+  'Mfoundi Market Circuit': '/images/destinations/real/mfoundi-market-circuit.jpg',
+  'Bamenda Highlands': '/images/destinations/real/bamenda-highlands.jpg',
+}
+
 const props = defineProps({
   destination: { type: Object, required: true },
   matchTags: { type: Array, default: () => [] },
@@ -29,6 +44,12 @@ const hasMatch = computed(() => {
     return false
   }
 })
+
+const imageSrc = computed(() => {
+  if (props.destination?.media?.main) return props.destination.media.main
+  if (props.destination?.name && imageByName[props.destination.name]) return imageByName[props.destination.name]
+  return null
+})
 </script>
 
 <template>
@@ -37,6 +58,13 @@ const hasMatch = computed(() => {
   >
     <!-- Main face -->
     <div class="p-6">
+      <div v-if="imageSrc" class="mb-4 overflow-hidden rounded-2xl border border-border-light bg-cream">
+        <img
+          :src="imageSrc"
+          :alt="`${destination.name} image`"
+          class="h-40 w-full object-cover transition duration-300 group-hover:scale-105"
+        />
+      </div>
       <div class="flex items-start justify-between gap-2">
         <div>
           <h3 class="font-display text-2xl font-semibold leading-tight text-deep-blue">

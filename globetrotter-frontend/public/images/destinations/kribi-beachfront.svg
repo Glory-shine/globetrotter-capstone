@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <rect width="800" height="500" rx="40" fill="#E0F2FE"/>
+  <rect x="36" y="36" width="728" height="428" rx="28" fill="#ffffff" opacity="0.86"/>
+  <path d="M120 360c90-40 160-74 230-74 70 0 130 16 220 70v104H120z" fill="#4C9A2A" opacity="0.82"/>
+  <circle cx="224" cy="200" r="70" fill="#FDE68A" opacity="0.85"/>
+  <path d="M250 170c28-50 90-66 128-36 34 27 42 88 10 132" stroke="#2A3D66" stroke-width="14" stroke-linecap="round" fill="none"/>
+  <text x="140" y="332" fill="#2A3D66" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="700">Kribi Beachfront</text>
+  <text x="140" y="372" fill="#2A3D66" font-family="Segoe UI, Arial, sans-serif" font-size="22" opacity="0.8">beach and ocean breeze</text>
+</svg>

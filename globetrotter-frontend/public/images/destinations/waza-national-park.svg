@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <rect width="800" height="500" rx="40" fill="#D8F3DC"/>
+  <rect x="36" y="36" width="728" height="428" rx="28" fill="#ffffff" opacity="0.84"/>
+  <path d="M140 360c70-90 118-130 220-122 80 6 150 48 220 46 54-1 100-26 140-64v164H140z" fill="#4C9A2A" opacity="0.82"/>
+  <circle cx="236" cy="200" r="72" fill="#2F4F4F" opacity="0.9"/>
+  <text x="140" y="332" fill="#2F4F4F" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="700">Waza National Park</text>
+  <text x="140" y="372" fill="#2F4F4F" font-family="Segoe UI, Arial, sans-serif" font-size="22" opacity="0.8">wildlife and savanna</text>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <rect width="800" height="500" rx="40" fill="#F4E1C1"/>
+  <rect x="36" y="36" width="728" height="428" rx="28" fill="#ffffff" opacity="0.84"/>
+  <path d="M180 360c40-110 110-170 190-170 80 0 150 60 190 170" fill="#5B8E7D" opacity="0.9"/>
+  <path d="M280 180c16-56 80-80 120-40" stroke="#2A3D66" stroke-width="14" stroke-linecap="round" fill="none"/>
+  <text x="140" y="332" fill="#2A3D66" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="700">Limbe Botanical Gardens</text>
+  <text x="140" y="372" fill="#2A3D66" font-family="Segoe UI, Arial, sans-serif" font-size="22" opacity="0.8">gardens and ocean views</text>
+</svg>

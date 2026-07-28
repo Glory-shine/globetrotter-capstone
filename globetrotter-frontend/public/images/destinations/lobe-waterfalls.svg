@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <rect width="800" height="500" rx="40" fill="#D8F3DC"/>
+  <rect x="36" y="36" width="728" height="428" rx="28" fill="#ffffff" opacity="0.84"/>
+  <path d="M120 360h560" stroke="#2F4F4F" stroke-width="20" stroke-linecap="round"/>
+  <path d="M180 360l96-134 96 134" fill="#4C9A2A" opacity="0.9"/>
+  <path d="M360 360l96-176 96 176" fill="#2F4F4F" opacity="0.9"/>
+  <text x="140" y="332" fill="#2F4F4F" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="700">Lobé Waterfalls</text>
+  <text x="140" y="372" fill="#2F4F4F" font-family="Segoe UI, Arial, sans-serif" font-size="22" opacity="0.8">cascades and rainforest</text>
+</svg>

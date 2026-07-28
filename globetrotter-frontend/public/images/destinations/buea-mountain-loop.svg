@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <rect width="800" height="500" rx="40" fill="#D8F3DC"/>
+  <rect x="36" y="36" width="728" height="428" rx="28" fill="#ffffff" opacity="0.84"/>
+  <path d="M180 360l120-188 122 188" fill="#4C9A2A" opacity="0.92"/>
+  <path d="M360 360l120-260 120 260" fill="#2F4F4F" opacity="0.92"/>
+  <text x="140" y="332" fill="#2F4F4F" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="700">Buea Mountain Loop</text>
+  <text x="140" y="372" fill="#2F4F4F" font-family="Segoe UI, Arial, sans-serif" font-size="22" opacity="0.8">cool highlands and hikes</text>
+</svg>

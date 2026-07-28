@@ -1,8 +1,11 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest'
 import { mount } from '@vue/test-utils'
 
-// Mock vue-router useRoute to provide route params
-vi.mock('vue-router', () => ({ useRoute: () => ({ params: { id: 'dest-001' } }) }))
+// Mock vue-router to provide route params and router access
+vi.mock('vue-router', () => ({
+  useRoute: () => ({ params: { id: 'dest-001' } }),
+  useRouter: () => ({ back: vi.fn() }),
+}))
 
 // Mock the destinations API
 const mockDestination = {
@@ -13,6 +16,7 @@ const mockDestination = {
   latitude: 1.23,
   longitude: 4.56,
   description: 'A lovely mock place',
+  full_description: 'A richly layered destination where visitors can spend the morning discovering local markets, the afternoon exploring scenic viewpoints, and the evening enjoying a relaxed dinner with regional specialties.',
   avg_cost_per_day: 100,
   media: {
     main: 'https://example.com/image.jpg',
@@ -28,7 +32,7 @@ vi.mock('../src/api/destinations', () => ({
 // Stub the InteractiveMap to avoid leaflet dependency
 const InteractiveMapStub = {
   name: 'InteractiveMap',
-  props: ['items', 'center', 'visible', 'title'],
+  props: ['items', 'center', 'visible', 'title', 'showUserLocation'],
   template: '<div class="interactive-map-stub">map</div>',
 }
 
@@ -48,6 +52,7 @@ describe('DestinationDetailsView', () => {
 
     expect(wrapper.text()).toContain('Mock Place')
     expect(wrapper.text()).toContain('A lovely mock place')
+    expect(wrapper.text()).toContain('A richly layered destination where visitors can spend the morning discovering local markets, the afternoon exploring scenic viewpoints, and the evening enjoying a relaxed dinner with regional specialties.')
     // main media shown via img src
     const img = wrapper.find('img')
     expect(img.exists()).toBe(true)
@@ -57,5 +62,6 @@ describe('DestinationDetailsView', () => {
     expect(wrapper.text()).toContain('$10')
     // coordinates
     expect(wrapper.text()).toContain('Lat: 1.23, Lon: 4.56')
+    expect(wrapper.findComponent(InteractiveMapStub).props('showUserLocation')).toBe(false)
   })
 })

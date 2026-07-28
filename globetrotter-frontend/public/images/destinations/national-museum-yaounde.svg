@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <rect width="800" height="500" rx="40" fill="#F4E1C1"/>
+  <rect x="36" y="36" width="728" height="428" rx="28" fill="#ffffff" opacity="0.86"/>
+  <rect x="140" y="120" width="220" height="220" rx="24" fill="#5B8E7D"/>
+  <rect x="380" y="160" width="220" height="140" rx="24" fill="#2A3D66"/>
+  <path d="M170 360h160" stroke="#2A3D66" stroke-width="16" stroke-linecap="round"/>
+  <text x="140" y="334" fill="#2A3D66" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="700">National Museum</text>
+  <text x="140" y="372" fill="#2A3D66" font-family="Segoe UI, Arial, sans-serif" font-size="22" opacity="0.8">heritage and culture</text>
+</svg>

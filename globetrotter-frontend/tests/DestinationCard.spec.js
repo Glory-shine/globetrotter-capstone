@@ -30,10 +30,28 @@ describe('DestinationCard', () => {
     }
   })
 
-  it('formats the average cost per day', () => {
+  it('shows the destination summary without a price tag', () => {
     const wrapper = mount(DestinationCard, { props: { destination: mockDestination } })
-    expect(wrapper.text()).toContain('$45')
-    expect(wrapper.text()).toContain('/day')
+    expect(wrapper.text()).toContain('Volcanic beaches, rice terraces, and laid-back surf towns.')
+    expect(wrapper.text()).not.toContain('$45')
+    expect(wrapper.text()).not.toContain('/day')
+  })
+
+  it('renders a destination image when one is provided', () => {
+    const wrapper = mount(DestinationCard, {
+      props: {
+        destination: {
+          ...mockDestination,
+          media: {
+            main: '/images/destinations/yaounde-food-trail.svg',
+          },
+        },
+      },
+    })
+
+    const image = wrapper.find('img[alt="destination image"]')
+    expect(image.exists()).toBe(true)
+    expect(image.attributes('src')).toContain('/images/destinations/yaounde-food-trail.svg')
   })
 
   it('shows a match stamp only when matchTags overlap the destination tags', () => {
