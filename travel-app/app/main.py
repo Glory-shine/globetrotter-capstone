@@ -8,13 +8,9 @@ clean, independently-testable modules.
 
 Run locally:
     uvicorn app.main:app --reload
-
-Cross-platform accessibility: this is a stateless REST/JSON HTTP API, so
-any client capable of making HTTP requests — a native mobile app, a
-desktop app, or a browser-based single-page app — can consume it
-identically. CORS is left open here; lock `allow_origins` down to your
-real client origins before shipping to production.
 """
+
+import os
 
 from fastapi import FastAPI, Request, status
 from fastapi.encoders import jsonable_encoder
@@ -30,9 +26,12 @@ app = FastAPI(
     version="1.0.0",
 )
 
+allowed_origins = os.getenv("CORS_ALLOWED_ORIGINS", "http://localhost:5173,http://127.0.0.1:5173,https://globetrotter-travelassistant-production-2185.up.railway.app")
+allowed_origins = [origin.strip() for origin in allowed_origins.split(",") if origin.strip()]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=allowed_origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

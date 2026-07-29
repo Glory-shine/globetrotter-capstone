@@ -28,6 +28,11 @@ class TokenResponse(BaseModel):
 
 # ---- Destinations ----
 
+class DestinationMedia(BaseModel):
+    main: Optional[str] = None
+    secondary: List[str] = Field(default_factory=list)
+
+
 class DestinationOut(BaseModel):
     id: str
     name: str
@@ -43,6 +48,7 @@ class DestinationOut(BaseModel):
     longitude: Optional[float] = None
     rating: Optional[float] = None
     budget_tier: Optional[str] = None
+    media: Optional[DestinationMedia] = None
 
 
 # ---- Itineraries ----

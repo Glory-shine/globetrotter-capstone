@@ -11,6 +11,17 @@
         "food"
       ],
       "created_at": "2026-07-17T23:07:06.499961+00:00"
+    },
+    {
+      "id": "2024c521-4d3f-43be-88fe-c07a184ed87b",
+      "username": "verify-user-2",
+      "email": "verify-user-2@example.com",
+      "hashed_password": "d220fccab06ced53b4a814b9e36837f3$f00a1e717fb9e135da1019f5e919035e9150dd47b56c02ce9f005efd4236f038",
+      "preferences": [
+        "nature",
+        "culture"
+      ],
+      "created_at": "2026-07-28T10:20:23.033843+00:00"
     }
   ],
   "destinations": [
@@ -254,6 +265,1790 @@
       "latitude": 5.96,
       "longitude": 10.15,
       "rating": 4.4,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-013",
+      "name": "Bafoussam",
+      "country": "Cameroon",
+      "tags": [
+        "culture",
+        "city",
+        "food",
+        "budget"
+      ],
+      "climate": "highland",
+      "avg_cost_per_day": 32000.0,
+      "price_range_xaf": "15,000-40,000",
+      "description": "Regional capital of the West, known for lively markets, colonial architecture, and the cultural heartbeat of the Grassfields.",
+      "best_season": "Nov-Mar",
+      "category": "culture",
+      "latitude": 5.4667,
+      "longitude": 10.4167,
+      "rating": 4.4,
+      "budget_tier": "budget",
+      "media": {
+        "main": "/images/destination_ouest_Cameroun/badenkop.jpg",
+        "secondary": [
+          "/images/destination_ouest_Cameroun/badenkop2.jpg",
+          "/images/destination_ouest_Cameroun/badenkop3.jpg",
+          "/images/destination_ouest_Cameroun/badenkop4.jpg",
+          "/images/destination_ouest_Cameroun/badenkop5.jpg",
+          "/images/destination_ouest_Cameroun/badenkop6.jpg"
+        ]
+      }
+    },
+    {
+      "id": "dest-014",
+      "name": "Dschang",
+      "country": "Cameroon",
+      "tags": [
+        "culture",
+        "nature",
+        "university",
+        "budget"
+      ],
+      "climate": "highland",
+      "avg_cost_per_day": 30000.0,
+      "price_range_xaf": "12,000-35,000",
+      "description": "A highland town with university life, cool climate, scenic viewpoints and a strong tradition of local craftsmanship.",
+      "best_season": "Nov-Feb",
+      "category": "culture",
+      "latitude": 5.45,
+      "longitude": 10.05,
+      "rating": 4.5,
+      "budget_tier": "budget",
+      "media": {
+        "main": "/images/destination_ouest_Cameroun/musee_dschang1.jpg",
+        "secondary": [
+          "/images/destination_ouest_Cameroun/musee_dschang2.jpg",
+          "/images/destination_ouest_Cameroun/musee_dschang4.jpg"
+        ]
+      }
+    },
+    {
+      "id": "dest-015",
+      "name": "Bana",
+      "country": "Cameroon",
+      "tags": [
+        "culture",
+        "nature",
+        "tradition",
+        "budget"
+      ],
+      "climate": "highland",
+      "avg_cost_per_day": 29000.0,
+      "price_range_xaf": "12,000-35,000",
+      "description": "A traditional town in the Haut-Nkam division, known for its quiet landscapes, local heritage and welcoming Grassfields communities.",
+      "best_season": "Nov-Mar",
+      "category": "culture",
+      "latitude": 5.05,
+      "longitude": 10.15,
+      "rating": 4.2,
+      "budget_tier": "budget",
+      "media": {
+        "main": "/images/destination_ouest_Cameroun/vallee_de_bana.jpg",
+        "secondary": [
+          "/images/destination_ouest_Cameroun/vallee_de_bana2.jpg"
+        ]
+      }
+    },
+    {
+      "id": "dest-016",
+      "name": "Bandjoun",
+      "country": "Cameroon",
+      "tags": [
+        "culture",
+        "history",
+        "art",
+        "budget"
+      ],
+      "climate": "highland",
+      "avg_cost_per_day": 31000.0,
+      "price_range_xaf": "15,000-40,000",
+      "description": "Famous for its royal traditions, museum spaces, and a vibrant arts scene that celebrates Bamoun and Grassfields culture.",
+      "best_season": "Nov-Mar",
+      "category": "culture",
+      "latitude": 5.3667,
+      "longitude": 10.4167,
+      "rating": 4.4,
+      "budget_tier": "budget",
+      "media": {
+        "main": "/images/destination_ouest_Cameroun/musee_bamoun1.jpg",
+        "secondary": [
+          "/images/destination_ouest_Cameroun/musee_bamoun2.jpg"
+        ]
+      }
+    },
+    {
+      "id": "dest-017",
+      "name": "Badenkop",
+      "country": "Cameroon",
+      "tags": [
+        "culture",
+        "nature",
+        "heritage",
+        "adventure"
+      ],
+      "climate": "highland",
+      "avg_cost_per_day": 33000.0,
+      "price_range_xaf": "15,000-40,000",
+      "description": "A traditional stronghold of the Grassfields, rich in royal heritage, scenic ridges and deep cultural identity.",
+      "best_season": "Nov-Feb",
+      "category": "culture",
+      "latitude": 5.2,
+      "longitude": 10.2833,
+      "rating": 4.3,
+      "budget_tier": "mid",
+      "media": {
+        "main": "/images/destination_ouest_Cameroun/badenkop2.jpg",
+        "secondary": [
+          "/images/destination_ouest_Cameroun/badenkop3.jpg",
+          "/images/destination_ouest_Cameroun/badenkop4.jpg",
+          "/images/destination_ouest_Cameroun/badenkop5.jpg",
+          "/images/destination_ouest_Cameroun/badenkop6.jpg"
+        ]
+      }
+    },
+    {
+      "id": "dest-018",
+      "name": "Mont Mbapit",
+      "country": "Cameroon",
+      "tags": [
+        "nature",
+        "adventure",
+        "hiking",
+        "viewpoint"
+      ],
+      "climate": "highland",
+      "avg_cost_per_day": 35000.0,
+      "price_range_xaf": "15,000-45,000",
+      "description": "An ancient volcanic landscape in the Noun department, with a sacred crater lake, steep ridges, lush Prunus forest and a dramatic ascent that blends physical adventure with local spirituality.",
+      "full_description": "Situé entre les villes de Foumbot et de Foumban, dans le département du Noun, le mont Mbapit est un ancien volcan éteint qui culmine à environ 1 988 mètres d'altitude, l'une des cimes les plus élevées de la chaîne des monts Bamboutos. Ce paysage volcanique aurait, selon la tradition orale locale, autrefois déversé des coulées de lave noire sur la plaine environnante — un souvenir géologique qui nourrit aujourd'hui encore l'imaginaire collectif de la région bamoun. Le site est marqué par un lac de cratère surnommé lac Mfu ou lac Nfou, considéré comme sacré par les populations locales. L'ascension passe par un escalier de plusieurs centaines de marches, puis une forêt de Prunus africana qui s'étend sur plus de 1 600 hectares sur les flancs de la montagne, offrant une randonnée à la fois physique, culturelle et spirituelle.",
+      "best_season": "Nov-Feb",
+      "category": "nature",
+      "latitude": 5.65,
+      "longitude": 10.2,
+      "rating": 4.6,
+      "budget_tier": "mid",
+      "media": {
+        "main": "/images/destination_ouest_Cameroun/Mont_Mbapit.jpg",
+        "secondary": [
+          "/images/destination_ouest_Cameroun/badenkop5.jpg",
+          "/images/destination_ouest_Cameroun/Mont_mbappit 1.jpg"
+        ]
+      }
+    },
+    {
+      "id": "dest-019",
+      "name": "Musée des Civilisations de Dschang",
+      "country": "Cameroon",
+      "tags": [
+        "culture",
+        "history",
+        "museum",
+        "heritage"
+      ],
+      "climate": "highland",
+      "avg_cost_per_day": 28000.0,
+      "price_range_xaf": "10,000-30,000",
+      "description": "A modern museum on the shores of Dschang’s municipal lake, presenting the history of Cameroon and the rich cultural heritage of the West Region.",
+      "full_description": "Inauguré le 20 novembre 2010 et officiellement créé en 2011, le Musée des Civilisations de Dschang est né d'un partenariat entre la commune de Dschang et la ville française de Nantes, dans le cadre du vaste programme culturel « La Route des Chefferies ». Bâti au bord du lac municipal aménagé de Dschang, l'édifice se distingue par une architecture contemporaine à forte identité africaine. Sur une surface d'exposition d'environ 1 000 mètres carrés, le musée retrace l'histoire du Cameroun depuis la préhistoire jusqu'à l'époque contemporaine, en passant par la traite négrière, la période coloniale et les grands espaces culturels du pays, avec des objets ethnographiques, des huttes traditionnelles reconstituées, des masques, des sculptures et des documents photographiques.",
+      "best_season": "Year-round",
+      "category": "culture",
+      "latitude": 5.45,
+      "longitude": 10.05,
+      "rating": 4.5,
+      "budget_tier": "budget",
+      "media": {
+        "main": "/images/destination_ouest_Cameroun/musee_dschang1.jpg",
+        "secondary": [
+          "/images/destination_ouest_Cameroun/musee_dschang2.jpg",
+          "/images/destination_ouest_Cameroun/musee_dschang4.jpg"
+        ]
+      }
+    },
+    {
+      "id": "dest-020",
+      "name": "Site historique de Loung Mbelli",
+      "country": "Cameroon",
+      "tags": [
+        "history",
+        "culture",
+        "heritage",
+        "memory"
+      ],
+      "climate": "highland",
+      "avg_cost_per_day": 30000.0,
+      "price_range_xaf": "10,000-35,000",
+      "description": "A memorial landscape in Bandenkop linked to the struggle for independence and the historic ALNK guerrilla resistance in the Grassfields.",
+      "full_description": "Le village de Bandenkop, dans l'arrondissement de Bangou, occupe une place particulière dans l'histoire contemporaine du Cameroun : il fut, entre 1955 et 1962, le quartier général de l'Armée de Libération Nationale du Kamerun (ALNK), bras armé de l'UPC. Le site connu localement sous le nom de Loung Mbelli est associé à ces années de lutte, marquées par la présence de tranchées creusées par les combattants nationalistes pour se protéger des attaques et organiser leur résistance. Aujourd'hui, ce lieu rappelle le rôle de Bandenkop dans la mémoire de la guerre du maquis et la valorisation du patrimoine historique de l'Ouest camerounais.",
+      "best_season": "Nov-Mar",
+      "category": "culture",
+      "latitude": 5.2,
+      "longitude": 10.2833,
+      "rating": 4.2,
+      "budget_tier": "budget",
+      "media": {
+        "main": "/images/destination_ouest_Cameroun/badenkop2.jpg",
+        "secondary": [
+          "/images/destination_ouest_Cameroun/badenkop3.jpg",
+          "/images/destination_ouest_Cameroun/badenkop4.jpg",
+          "/images/destination_ouest_Cameroun/badenkop5.jpg",
+          "/images/destination_ouest_Cameroun/badenkop6.jpg"
+        ]
+      }
+    },
+    {
+      "id": "dest-021",
+      "name": "Vallée de Bana",
+      "country": "Cameroon",
+      "tags": [
+        "nature",
+        "culture",
+        "ecotourism",
+        "wellness"
+      ],
+      "climate": "highland",
+      "avg_cost_per_day": 36000.0,
+      "price_range_xaf": "15,000-45,000",
+      "description": "A cool highland valley in the Haut-Nkam division, known for its greenery, agricultural landscapes, traditional chiefdom, and ecotourism facilities.",
+      "full_description": "Bana, surnommée localement le « petit Paris », est une commune du département du Haut-Nkam connue pour son climat frais, ses belles bâtisses, ses paysages verdoyants et sa chefferie traditionnelle bamiléké particulièrement bien conservée. La vallée de Bana est aujourd'hui associée à un complexe hôtelier et écotouristique aménagé au creux d'un vallon, avec piscine, spa, terrain de tennis et activités d'immersion culturelle. Le site est également proche des chutes de la Mouankeu et de l'environnement agricole de la région, ce qui en fait un point de départ idéal pour explorer les richesses du Haut-Nkam.",
+      "best_season": "Nov-Feb",
+      "category": "nature",
+      "latitude": 5.05,
+      "longitude": 10.15,
+      "rating": 4.4,
+      "budget_tier": "mid",
+      "media": {
+        "main": "/images/destination_ouest_Cameroun/vallee_de_bana.jpg",
+        "secondary": [
+          "/images/destination_ouest_Cameroun/vallee_de_bana2.jpg"
+        ]
+      }
+    },
+    {
+      "id": "dest-022",
+      "name": "Musée des Rois Bamoun",
+      "country": "Cameroon",
+      "tags": [
+        "culture",
+        "history",
+        "museum",
+        "heritage"
+      ],
+      "climate": "highland",
+      "avg_cost_per_day": 32000.0,
+      "price_range_xaf": "12,000-40,000",
+      "description": "A monumental museum in Foumban that traces the six-century history of the Bamoun kingdom and its royal heritage through immersive exhibitions.",
+      "full_description": "À Foumban, capitale historique du royaume Bamoun, se dresse le nouveau Musée des Rois Bamoun, inauguré en 2024. Le musée retrace l'histoire de la dynastie bamoun depuis sa fondation en 1394 jusqu'à nos jours, à travers plus de 12 500 pièces réparties selon les règnes successifs. Son architecture symbolique, ses espaces chronologiques, ses objets royaux et ses pièces consacrées à Ibrahim Njoya en font un lieu majeur du patrimoine culturel camerounais, au cœur de la Route des Chefferies.",
+      "best_season": "Year-round",
+      "category": "culture",
+      "latitude": 5.7333,
+      "longitude": 10.9,
+      "rating": 4.7,
+      "budget_tier": "mid",
+      "media": {
+        "main": "/images/destination_ouest_Cameroun/musee_bamoun1.jpg",
+        "secondary": [
+          "/images/destination_ouest_Cameroun/musee_bamoun2.jpg"
+        ]
+      }
+    },
+    {
+      "id": "dest-cm-001",
+      "name": "Yaound\u00e9 (centre-ville)",
+      "country": "Cameroon",
+      "tags": [
+        "city",
+        "centre",
+        "culture"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Capitale politique du Cameroun",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 3.848,
+      "longitude": 11.5021,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-002",
+      "name": "Yaound\u00e9 Ier",
+      "country": "Cameroon",
+      "tags": [
+        "city",
+        "centre",
+        "neighborhood"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Arrondissement de Yaound\u00e9",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 3.8722,
+      "longitude": 11.5178,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-003",
+      "name": "Yaound\u00e9 IIe",
+      "country": "Cameroon",
+      "tags": [
+        "city",
+        "centre",
+        "neighborhood"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Arrondissement de Yaound\u00e9",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 3.8794,
+      "longitude": 11.5228,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-004",
+      "name": "Yaound\u00e9 IIIe",
+      "country": "Cameroon",
+      "tags": [
+        "city",
+        "centre",
+        "neighborhood"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Arrondissement de Yaound\u00e9",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 3.8461,
+      "longitude": 11.5322,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-005",
+      "name": "Yaound\u00e9 IVe",
+      "country": "Cameroon",
+      "tags": [
+        "city",
+        "centre",
+        "neighborhood"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Arrondissement de Yaound\u00e9",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 3.8722,
+      "longitude": 11.4525,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-006",
+      "name": "Yaound\u00e9 Ve",
+      "country": "Cameroon",
+      "tags": [
+        "city",
+        "centre",
+        "neighborhood"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Arrondissement de Yaound\u00e9",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 3.8306,
+      "longitude": 11.4839,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-007",
+      "name": "Yaound\u00e9 VIe",
+      "country": "Cameroon",
+      "tags": [
+        "city",
+        "centre",
+        "neighborhood"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Arrondissement de Yaound\u00e9",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 3.8017,
+      "longitude": 11.5306,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-008",
+      "name": "Yaound\u00e9 VIIe",
+      "country": "Cameroon",
+      "tags": [
+        "city",
+        "centre",
+        "neighborhood"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Arrondissement de Yaound\u00e9",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 3.935,
+      "longitude": 11.515,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-009",
+      "name": "Bastos",
+      "country": "Cameroon",
+      "tags": [
+        "city",
+        "neighborhood",
+        "culture"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Quartier r\u00e9sidentiel / diplomatique",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 3.8917,
+      "longitude": 11.5147,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-010",
+      "name": "Ngousso",
+      "country": "Cameroon",
+      "tags": [
+        "city",
+        "neighborhood"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Quartier de Yaound\u00e9",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 3.8931,
+      "longitude": 11.5386,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-011",
+      "name": "Essos",
+      "country": "Cameroon",
+      "tags": [
+        "city",
+        "neighborhood"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Quartier de Yaound\u00e9",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 3.8794,
+      "longitude": 11.5228,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-012",
+      "name": "Mvog-Mbi",
+      "country": "Cameroon",
+      "tags": [
+        "city",
+        "neighborhood"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Quartier de Yaound\u00e9",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 3.8508,
+      "longitude": 11.5119,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-013",
+      "name": "Mvan",
+      "country": "Cameroon",
+      "tags": [
+        "city",
+        "neighborhood"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Quartier de Yaound\u00e9",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 3.8342,
+      "longitude": 11.4931,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-014",
+      "name": "Nkolbisson",
+      "country": "Cameroon",
+      "tags": [
+        "city",
+        "neighborhood"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Quartier de Yaound\u00e9",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 3.8722,
+      "longitude": 11.4525,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-015",
+      "name": "Etoudi",
+      "country": "Cameroon",
+      "tags": [
+        "city",
+        "neighborhood",
+        "culture"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Si\u00e8ge de la Pr\u00e9sidence de la R\u00e9publique",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 3.9011,
+      "longitude": 11.5183,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-016",
+      "name": "Mendong",
+      "country": "Cameroon",
+      "tags": [
+        "city",
+        "neighborhood"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Quartier de Yaound\u00e9",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 3.8189,
+      "longitude": 11.4622,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-017",
+      "name": "Odza",
+      "country": "Cameroon",
+      "tags": [
+        "city",
+        "neighborhood"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Quartier de Yaound\u00e9",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 3.8017,
+      "longitude": 11.5306,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-018",
+      "name": "Biyem-Assi",
+      "country": "Cameroon",
+      "tags": [
+        "city",
+        "neighborhood"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Quartier de Yaound\u00e9",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 3.8306,
+      "longitude": 11.4839,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-019",
+      "name": "Nkoldongo",
+      "country": "Cameroon",
+      "tags": [
+        "city",
+        "neighborhood"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Quartier de Yaound\u00e9",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 3.8461,
+      "longitude": 11.5322,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-020",
+      "name": "Mokolo",
+      "country": "Cameroon",
+      "tags": [
+        "city",
+        "market",
+        "culture"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Grand march\u00e9 populaire",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 3.8767,
+      "longitude": 11.5069,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-021",
+      "name": "Etoug-Ebe",
+      "country": "Cameroon",
+      "tags": [
+        "city",
+        "neighborhood"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Quartier de Yaound\u00e9",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 3.8489,
+      "longitude": 11.4794,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-022",
+      "name": "Ekounou",
+      "country": "Cameroon",
+      "tags": [
+        "city",
+        "neighborhood"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Quartier de Yaound\u00e9",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 3.8433,
+      "longitude": 11.5325,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-023",
+      "name": "Melen",
+      "country": "Cameroon",
+      "tags": [
+        "city",
+        "neighborhood",
+        "culture"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Universit\u00e9 de Yaound\u00e9 I \u00e0 proximit\u00e9",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 3.8531,
+      "longitude": 11.4919,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-024",
+      "name": "Simbock",
+      "country": "Cameroon",
+      "tags": [
+        "city",
+        "neighborhood"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Quartier de Yaound\u00e9",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 3.8158,
+      "longitude": 11.4944,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-025",
+      "name": "Olembe",
+      "country": "Cameroon",
+      "tags": [
+        "city",
+        "neighborhood"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Quartier de Yaound\u00e9",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 3.935,
+      "longitude": 11.515,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-026",
+      "name": "Elig-Edzoa",
+      "country": "Cameroon",
+      "tags": [
+        "city",
+        "neighborhood"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Quartier de Yaound\u00e9",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 3.88,
+      "longitude": 11.52,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-027",
+      "name": "Nlongkak",
+      "country": "Cameroon",
+      "tags": [
+        "city",
+        "neighborhood"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Quartier de Yaound\u00e9",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 3.8797,
+      "longitude": 11.5211,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-028",
+      "name": "Tsinga",
+      "country": "Cameroon",
+      "tags": [
+        "city",
+        "neighborhood"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Quartier de Yaound\u00e9",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 3.8794,
+      "longitude": 11.4978,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-029",
+      "name": "Messa",
+      "country": "Cameroon",
+      "tags": [
+        "city",
+        "neighborhood"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Quartier de Yaound\u00e9",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 3.8656,
+      "longitude": 11.4972,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-030",
+      "name": "Madagascar",
+      "country": "Cameroon",
+      "tags": [
+        "city",
+        "neighborhood"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Quartier de Yaound\u00e9",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 3.8783,
+      "longitude": 11.5083,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-031",
+      "name": "Briqueterie",
+      "country": "Cameroon",
+      "tags": [
+        "city",
+        "neighborhood",
+        "culture"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Quartier musulman historique",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 3.8756,
+      "longitude": 11.5119,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-032",
+      "name": "Nsam",
+      "country": "Cameroon",
+      "tags": [
+        "city",
+        "neighborhood"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Quartier de Yaound\u00e9",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 3.8367,
+      "longitude": 11.5178,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-033",
+      "name": "Eki\u00e9",
+      "country": "Cameroon",
+      "tags": [
+        "city",
+        "neighborhood"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Quartier de Yaound\u00e9",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 3.8664,
+      "longitude": 11.5344,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-034",
+      "name": "Emana",
+      "country": "Cameroon",
+      "tags": [
+        "city",
+        "neighborhood"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Quartier de Yaound\u00e9",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 3.9294,
+      "longitude": 11.5089,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-035",
+      "name": "Mont F\u00e9b\u00e9",
+      "country": "Cameroon",
+      "tags": [
+        "tourism",
+        "culture",
+        "nature"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Colline surplombant Yaound\u00e9",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 3.8858,
+      "longitude": 11.5261,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-036",
+      "name": "Mus\u00e9e National du Cameroun",
+      "country": "Cameroon",
+      "tags": [
+        "culture",
+        "tourism"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Ancien palais pr\u00e9sidentiel, aujourd'hui mus\u00e9e",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 3.8656,
+      "longitude": 11.5183,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-037",
+      "name": "Cath\u00e9drale Notre-Dame des Victoires",
+      "country": "Cameroon",
+      "tags": [
+        "culture",
+        "tourism"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Site religieux",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 3.8608,
+      "longitude": 11.5183,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-038",
+      "name": "Monument de la R\u00e9unification",
+      "country": "Cameroon",
+      "tags": [
+        "culture",
+        "tourism"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Monument",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 3.8642,
+      "longitude": 11.5175,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-039",
+      "name": "Palais des Congr\u00e8s de Yaound\u00e9",
+      "country": "Cameroon",
+      "tags": [
+        "culture",
+        "tourism"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Site culturel",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 3.8836,
+      "longitude": 11.5219,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-040",
+      "name": "A\u00e9roport International de Yaound\u00e9-Nsimalen",
+      "country": "Cameroon",
+      "tags": [
+        "infrastructure",
+        "transport"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Infrastructure / transport",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 3.7226,
+      "longitude": 11.5533,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-041",
+      "name": "Jardin Zoologique de Mvog-Betsi",
+      "country": "Cameroon",
+      "tags": [
+        "tourism",
+        "nature"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Parc zoologique et refuge pour primates",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 3.8467,
+      "longitude": 11.4967,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-042",
+      "name": "Mus\u00e9e d'Art Camerounais (Blackitude)",
+      "country": "Cameroon",
+      "tags": [
+        "culture",
+        "tourism"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Site culturel",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 3.8722,
+      "longitude": 11.5333,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-043",
+      "name": "Stade Omnisports Ahmadou Ahidjo",
+      "country": "Cameroon",
+      "tags": [
+        "sport",
+        "infrastructure"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Infrastructure sportive",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 3.8747,
+      "longitude": 11.5194,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-044",
+      "name": "March\u00e9 Central de Yaound\u00e9",
+      "country": "Cameroon",
+      "tags": [
+        "market",
+        "culture"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "March\u00e9",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 3.8656,
+      "longitude": 11.5178,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-045",
+      "name": "Chutes de la Sanaga \u00e0 Nachtigal",
+      "country": "Cameroon",
+      "tags": [
+        "nature",
+        "tourism"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Site du barrage hydro\u00e9lectrique de Nachtigal",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 4.35,
+      "longitude": 11.65,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-046",
+      "name": "R\u00e9serve de faune de Mpem et Djim",
+      "country": "Cameroon",
+      "tags": [
+        "nature",
+        "tourism"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Aire prot\u00e9g\u00e9e",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 5.2,
+      "longitude": 11.6,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-047",
+      "name": "Es\u00e9ka",
+      "country": "Cameroon",
+      "tags": [
+        "city",
+        "centre"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Ville / chef-lieu d'arrondissement",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 3.65,
+      "longitude": 10.7667,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-048",
+      "name": "Makak",
+      "country": "Cameroon",
+      "tags": [
+        "city",
+        "centre"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Ville / chef-lieu d'arrondissement",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 3.5833,
+      "longitude": 10.8833,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-049",
+      "name": "Bot Makak",
+      "country": "Cameroon",
+      "tags": [
+        "city",
+        "centre"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Ville / chef-lieu d'arrondissement",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 3.6167,
+      "longitude": 10.8,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-050",
+      "name": "Matomb",
+      "country": "Cameroon",
+      "tags": [
+        "city",
+        "centre"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Ville / chef-lieu d'arrondissement",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 4.0333,
+      "longitude": 10.9333,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-051",
+      "name": "Messondo",
+      "country": "Cameroon",
+      "tags": [
+        "city",
+        "centre"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Ville / chef-lieu d'arrondissement",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 3.9333,
+      "longitude": 10.75,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-052",
+      "name": "Ngog-Mapubi",
+      "country": "Cameroon",
+      "tags": [
+        "city",
+        "centre"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Ville / chef-lieu d'arrondissement",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 3.75,
+      "longitude": 10.6667,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-053",
+      "name": "Nguibassal",
+      "country": "Cameroon",
+      "tags": [
+        "city",
+        "centre"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Ville / chef-lieu d'arrondissement",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 3.55,
+      "longitude": 10.6,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-054",
+      "name": "Dibang",
+      "country": "Cameroon",
+      "tags": [
+        "city",
+        "centre"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Ville / chef-lieu d'arrondissement",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 3.55,
+      "longitude": 10.65,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-055",
+      "name": "Biyouha",
+      "country": "Cameroon",
+      "tags": [
+        "city",
+        "centre"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Ville / chef-lieu d'arrondissement",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 3.5,
+      "longitude": 10.5,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-056",
+      "name": "Akonolinga",
+      "country": "Cameroon",
+      "tags": [
+        "city",
+        "centre"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Ville / chef-lieu d'arrondissement",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 3.7667,
+      "longitude": 12.25,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-057",
+      "name": "Ayos",
+      "country": "Cameroon",
+      "tags": [
+        "city",
+        "centre"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Ville / chef-lieu d'arrondissement",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 3.9,
+      "longitude": 12.5167,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-058",
+      "name": "Endom",
+      "country": "Cameroon",
+      "tags": [
+        "city",
+        "centre"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Ville / chef-lieu d'arrondissement",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 3.95,
+      "longitude": 12.0333,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-059",
+      "name": "Nguelemendouka",
+      "country": "Cameroon",
+      "tags": [
+        "city",
+        "centre"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Ville / chef-lieu d'arrondissement",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 4.2333,
+      "longitude": 13.0,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-060",
+      "name": "Mbalmayo",
+      "country": "Cameroon",
+      "tags": [
+        "city",
+        "centre"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Ville / chef-lieu d'arrondissement",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 3.5167,
+      "longitude": 11.5,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-061",
+      "name": "Akoeman",
+      "country": "Cameroon",
+      "tags": [
+        "city",
+        "centre"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Ville / chef-lieu d'arrondissement",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 3.4,
+      "longitude": 11.6,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-062",
+      "name": "Dzeng",
+      "country": "Cameroon",
+      "tags": [
+        "city",
+        "centre"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Ville / chef-lieu d'arrondissement",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 3.6333,
+      "longitude": 11.3333,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-063",
+      "name": "Mengueme",
+      "country": "Cameroon",
+      "tags": [
+        "city",
+        "centre"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Ville / chef-lieu d'arrondissement",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 3.45,
+      "longitude": 11.65,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-064",
+      "name": "Ngomedzap",
+      "country": "Cameroon",
+      "tags": [
+        "city",
+        "centre"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Ville / chef-lieu d'arrondissement",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 3.4167,
+      "longitude": 11.3333,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-065",
+      "name": "Nkolmetet",
+      "country": "Cameroon",
+      "tags": [
+        "city",
+        "centre"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Ville / chef-lieu d'arrondissement",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 3.55,
+      "longitude": 11.6,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-066",
+      "name": "Bafia",
+      "country": "Cameroon",
+      "tags": [
+        "city",
+        "centre"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Ville / chef-lieu d'arrondissement",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 4.75,
+      "longitude": 11.2333,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-067",
+      "name": "Bokito",
+      "country": "Cameroon",
+      "tags": [
+        "city",
+        "centre"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Ville / chef-lieu d'arrondissement",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 4.5667,
+      "longitude": 11.1167,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-068",
+      "name": "Deuk",
+      "country": "Cameroon",
+      "tags": [
+        "city",
+        "centre"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Ville / chef-lieu d'arrondissement",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 4.85,
+      "longitude": 11.1,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-069",
+      "name": "Kiiki",
+      "country": "Cameroon",
+      "tags": [
+        "city",
+        "centre"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Ville / chef-lieu d'arrondissement",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 4.6,
+      "longitude": 11.05,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-070",
+      "name": "Kon-Yambetta",
+      "country": "Cameroon",
+      "tags": [
+        "city",
+        "centre"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Ville / chef-lieu d'arrondissement",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 4.65,
+      "longitude": 11.2,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-071",
+      "name": "Makenene",
+      "country": "Cameroon",
+      "tags": [
+        "city",
+        "centre"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Ville / chef-lieu d'arrondissement",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 4.9833,
+      "longitude": 10.8,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-072",
+      "name": "Nditam",
+      "country": "Cameroon",
+      "tags": [
+        "city",
+        "centre"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Ville / chef-lieu d'arrondissement",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 4.9,
+      "longitude": 11.3,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-073",
+      "name": "Ndikinimeki",
+      "country": "Cameroon",
+      "tags": [
+        "city",
+        "centre"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Ville / chef-lieu d'arrondissement",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 4.7667,
+      "longitude": 10.85,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-074",
+      "name": "Ombessa",
+      "country": "Cameroon",
+      "tags": [
+        "city",
+        "centre"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Ville / chef-lieu d'arrondissement",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 4.7,
+      "longitude": 11.45,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-075",
+      "name": "Ntui",
+      "country": "Cameroon",
+      "tags": [
+        "city",
+        "centre"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Ville / chef-lieu d'arrondissement",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 4.45,
+      "longitude": 11.6333,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-076",
+      "name": "Mbangassina",
+      "country": "Cameroon",
+      "tags": [
+        "city",
+        "centre"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Ville / chef-lieu d'arrondissement",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 4.6333,
+      "longitude": 11.4167,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-077",
+      "name": "Ngoro",
+      "country": "Cameroon",
+      "tags": [
+        "city",
+        "centre"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Ville / chef-lieu d'arrondissement",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 4.5,
+      "longitude": 11.9,
+      "rating": 4.3,
+      "budget_tier": "budget"
+    },
+    {
+      "id": "dest-cm-078",
+      "name": "Yoko",
+      "country": "Cameroon",
+      "tags": [
+        "city",
+        "centre"
+      ],
+      "climate": "tropical",
+      "avg_cost_per_day": 25000.0,
+      "price_range_xaf": "10,000-40,000",
+      "description": "Ville / chef-lieu d'arrondissement",
+      "best_season": "Year-round",
+      "category": "local",
+      "latitude": 5.5333,
+      "longitude": 12.3167,
+      "rating": 4.3,
       "budget_tier": "budget"
     }
   ],
