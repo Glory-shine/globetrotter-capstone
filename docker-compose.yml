@@ -1,0 +1,138 @@
+
+services:
+  # ---- Infrastructure -------------------------------------------------
+
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-gloire}
+      # Default DB created by the image; the init script below creates the
+      # three service-specific databases alongside it.
+      POSTGRES_DB: globetrotter
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./infra/postgres/init-multi-db.sql:/docker-entrypoint-initdb.d/init-multi-db.sql:ro
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-postgres}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  rabbitmq:
+    image: rabbitmq:3.13-management-alpine
+    restart: unless-stopped
+    ports:
+      - "5672:5672"   # AMQP
+      - "15672:15672" # Management UI (guest/guest)
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "-q", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  # ---- Microservices ----------------------------------------------------
+
+  user-service:
+    build: ./services/user-service
+    restart: unless-stopped
+    environment:
+      DATABASE_URL: postgresql+psycopg://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-gloire}@postgres:5432/user_db
+      JWT_SECRET_KEY: ${JWT_SECRET_KEY:-dev-secret-change-in-production}
+    ports:
+      - "8001:8001"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8001/health')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  itinerary-service:
+    build: ./services/itinerary-service
+    restart: unless-stopped
+    environment:
+      DATABASE_URL: postgresql+psycopg://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-gloire}@postgres:5432/itinerary_db
+      JWT_SECRET_KEY: ${JWT_SECRET_KEY:-dev-secret-change-in-production}
+      RECOMMENDATION_SERVICE_URL: http://recommendation-service:8003
+      RABBITMQ_URL: amqp://guest:guest@rabbitmq:5672/
+    ports:
+      - "8002:8002"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8002/health')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  recommendation-service:
+    build: ./services/recommendation-service
+    restart: unless-stopped
+    environment:
+      DATABASE_URL: postgresql+psycopg://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-gloire}@postgres:5432/recommendation_db
+      JWT_SECRET_KEY: ${JWT_SECRET_KEY:-dev-secret-change-in-production}
+      USER_SERVICE_URL: http://user-service:8001
+      ITINERARY_SERVICE_URL: http://itinerary-service:8002
+      RABBITMQ_URL: amqp://guest:guest@rabbitmq:5672/
+      CONSUME_EVENTS: "true"
+    ports:
+      - "8003:8003"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8003/health')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ---- Gateway ------------------------------------------------------------
+
+  gateway:
+    build: ./gateway
+    restart: unless-stopped
+    environment:
+      USER_SERVICE_URL: http://user-service:8001
+      ITINERARY_SERVICE_URL: http://itinerary-service:8002
+      RECOMMENDATION_SERVICE_URL: http://recommendation-service:8003
+    ports:
+      # Same port the Phase 1 monolith used — the frontend's
+      # VITE_API_BASE_URL doesn't need to change.
+      - "8000:8000"
+    depends_on:
+      user-service:
+        condition: service_healthy
+      itinerary-service:
+        condition: service_healthy
+      recommendation-service:
+        condition: service_healthy
+
+  # ---- Frontend -----------------------------------------------------------
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        # Baked in at build time (Vite env vars aren't readable at
+        # container runtime). Must match the gateway's published port/host
+        # as seen by the browser, not the internal Docker network name.
+        VITE_API_BASE_URL: ${FRONTEND_API_BASE_URL:-http://localhost:8000}
+    restart: unless-stopped
+    ports:
+      - "5173:80"
+    depends_on:
+      - gateway
+
+volumes:
+  postgres_data:
