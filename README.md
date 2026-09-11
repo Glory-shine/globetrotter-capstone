@@ -21,7 +21,7 @@ Tailwind côté frontend, le tout conteneurisé avec Docker.
 
 ## Fonctionnalités
 
-- **Recherche et carte réelle** de 12 lieux de Bafoussam (coordonnées GPS, photos)
+- **Recherche et carte réelle** plus de 20 lieux de Bafoussam (coordonnées GPS, photos)
 - **Assistant "Pour vous"** — un widget conversationnel qui propose des lieux
   selon le budget et les centres d'intérêt choisis (`GET /destinations`
   filtré côté serveur)
