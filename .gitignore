@@ -1,34 +1,69 @@
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Secrets and local config
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+
 # Python
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
-.Python
-env/
-venv/
-.venv/
-ENV/
-*.egg
-*.egg-info/
-dist/
-build/
-.eggs/
 .pytest_cache/
 .mypy_cache/
-*.pyo
+.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+.envrc
 
-# Environment variables
-.env
-.env.*
+# FastAPI / local databases
+*.db
+*.sqlite
+*.sqlite3
+/dev.db
+
+# Node / frontend
+node_modules/
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+frontend/.cache/
+frontend/coverage/
+
+# Build artifacts
+build/
+dist/
+out/
+*.log
 
 # Docker
-.dockerignore
+.docker/
 
-# Data files (populated at runtime; keep only .gitkeep)
-data/*.json
-
-# IDE / editor
+# IDE / OS
 .vscode/
 .idea/
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
 *.swp
 *.swo
+
+# Test outputs
+.pytest_cache/
+.coverage*
+
+# Optional local runtime data
+*.pid
+*.seed
+*.bak
