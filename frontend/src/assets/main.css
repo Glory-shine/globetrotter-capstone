@@ -1,0 +1,152 @@
+@import "tailwindcss";
+
+/* ---- Design tokens: Bamiléké-inspired palette ----------------------
+   Terracotta red (Bamiléké ceremonial red), indigo night-blue (ndop dye),
+   raffia gold, and warm market-canvas cream — grounded in the visual
+   language of Bafoussam's chefferies, markets, and textiles rather than a
+   generic "elegant travel app" look. Variable names are kept from the
+   previous iteration so every existing component picks up the new palette
+   automatically. */
+@theme {
+  --color-deep-blue: #1f3b57;        /* Indigo night-blue — headings, primary surfaces */
+  --color-deep-blue-light: #35597a;  /* Lighter indigo for secondary elements */
+  --color-sage: #c1502e;             /* Bamiléké terracotta red — primary accent, CTAs */
+  --color-sage-light: #e08a63;       /* Softer terracotta highlight */
+  --color-lavender: #c89b3c;         /* Raffia gold — secondary accent */
+  --color-lavender-light: #fbf0dc;   /* Soft gold-cream background */
+  --color-cream: #faf3e7;            /* Warm market-canvas background */
+  --color-cream-dark: #efe3cc;       /* Slightly deeper cream */
+  --color-text-primary: #22303b;     /* Dark charcoal-indigo for readability */
+  --color-text-secondary: #5c6b63;   /* Muted olive-slate text */
+  --color-text-light: #97a399;       /* Light text */
+  --color-border: #dcd3bf;           /* Warm sandy border */
+  --color-border-light: #efe8d8;     /* Very light border */
+
+  /* Backward-compatible aliases used by a couple of older utility classes. */
+  --color-paper: var(--color-cream);
+  --color-ink: var(--color-deep-blue);
+
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+/* ---- Perforated edge (ticket-stub divider) ---- */
+.perforated {
+  position: relative;
+  border-top: 1px solid color-mix(in srgb, var(--color-sage) 20%, transparent);
+}
+.perforated::before,
+.perforated::after {
+  content: "";
+  position: absolute;
+  top: -7px;
+  width: 14px;
+  height: 14px;
+  border-radius: 9999px;
+  background: var(--color-cream);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--color-sage) 15%, transparent);
+}
+.perforated::before {
+  left: -7px;
+}
+.perforated::after {
+  right: -7px;
+}
+
+/* Badge / stamp styling */
+.stamp {
+  transform: rotate(-3deg);
+  border: 1px solid var(--color-sage);
+  color: var(--color-sage);
+  background: color-mix(in srgb, var(--color-sage) 8%, transparent);
+}
+
+/* Dotted flight-path line for itinerary timelines */
+.flight-path {
+  background-image: linear-gradient(
+    to bottom,
+    color-mix(in srgb, var(--color-sage) 25%, transparent) 0,
+    color-mix(in srgb, var(--color-sage) 25%, transparent) 6px,
+    transparent 6px,
+    transparent 12px
+  );
+  background-size: 2px 12px;
+  background-repeat: repeat-y;
+  background-position: center;
+}
+
+/* ---- Signature motif: Bamiléké geometric triangle border --------------
+   A repeating triangle band evoking the geometric patterns woven into
+   ndop cloth and toghu regalia — used as a decorative divider on hero
+   sections and card headers instead of a generic gradient. */
+.bamileke-band {
+  height: 10px;
+  background-image: linear-gradient(135deg, var(--color-sage) 25%, transparent 25%),
+    linear-gradient(225deg, var(--color-sage) 25%, transparent 25%),
+    linear-gradient(45deg, var(--color-lavender) 25%, transparent 25%),
+    linear-gradient(315deg, var(--color-lavender) 25%, transparent 25%);
+  background-position: 0 0, 5px 0, 5px 0, 0 0;
+  background-size: 10px 10px;
+  background-repeat: repeat-x;
+  opacity: 0.8;
+}
+
+/* Subtle full-surface version for section backgrounds. */
+.bamileke-pattern {
+  background-image: radial-gradient(circle at 1px 1px, color-mix(in srgb, var(--color-deep-blue) 12%, transparent) 1px, transparent 0);
+  background-size: 18px 18px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* ---- Thème sombre --------------------------------------------------
+   Bascule appliquée via la classe .theme-dark sur <html> (voir
+   src/stores/settings.js). Tailwind v4 génère ses utilitaires de couleur
+   avec var(--color-*), donc redéfinir ces variables ici re-thème toute
+   l'application sans toucher aux composants. Les quelques surfaces
+   utilisant du blanc/opacité codés en dur (bg-white/80, etc.) sont
+   corrigées explicitement en dessous. */
+:root.theme-dark {
+  --color-deep-blue: #f2ede1;
+  --color-deep-blue-light: #d8d0bd;
+  --color-sage: #e08a63;
+  --color-sage-light: #c1502e;
+  --color-lavender: #e3c169;
+  --color-lavender-light: #232a3a;
+  --color-cream: #161a24;
+  --color-cream-dark: #10141c;
+  --color-text-primary: #f1ede2;
+  --color-text-secondary: #b9c0c9;
+  --color-text-light: #7c8790;
+  --color-border: #2c3342;
+  --color-border-light: #262c3b;
+}
+
+:root.theme-dark body {
+  background-color: var(--color-cream);
+}
+
+:root.theme-dark .bg-white,
+:root.theme-dark .bg-white\/90,
+:root.theme-dark .bg-white\/80,
+:root.theme-dark .bg-white\/70,
+:root.theme-dark .bg-white\/60 {
+  background-color: #1e2431;
+}
+
+:root.theme-dark .bg-white\/20 {
+  background-color: rgba(30, 36, 49, 0.4);
+}
+
+:root.theme-dark img {
+  filter: brightness(0.92);
+}
